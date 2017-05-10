@@ -8,19 +8,11 @@ $.ajaxSetup({
 });
 
 
-$.getJSON("assets/credentials/config.json", function (json) {
+$.getJSON("/assets/credentials/config.json", function (json) {
     apiSecret += json.apiSecret;
     sott += json.sott;
 
-})
-    .error(function () {
-        // assume an error means its in the "other" directory since HTML files are only in this or in manage
-        $.getJSON("../assets/credentials/config.json", function(json) {
-            apiSecret += json.apiSecret;
-            sott += json.sott;
-        })
-
-    });
+});
 
 function loginradius_interface(){
     $ui = LoginRadius_SocialLogin.lr_login_settings;
