@@ -27,11 +27,6 @@ https://nodejs.org
 
 I have included a demo zip file that follows this guideline, downloadable [here](https://github.com/erichan37/LoginRadius-Demo/blob/master/extras/demo_config.zip).
 
-
-Intent: To keep the apiKey safe on my local disk
-rather than embedded in the code.
-
-
 ## How to Start:
 ```
 - Run on terminal the command: http-server at the working directory
