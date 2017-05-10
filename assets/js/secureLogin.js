@@ -3,9 +3,10 @@
  */
 var options= {};
 
-options.onError = function() {
+options.onError = function(response) {
     alert("Error, please relogin");
-   window.location = "/index.html";
+    console.log(response);
+  // window.location = "/index.html";
 };
 options.onSuccess = function() {
     // do nothing, this is normal behaviour

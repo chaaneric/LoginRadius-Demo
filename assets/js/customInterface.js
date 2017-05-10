@@ -1,29 +1,21 @@
 /**
  * Created by chaneric on 2017-05-06.
  */
-var apiSecret = "";
-var sott = "";
-$.ajaxSetup({
-    async: false
+var custom_interface_option = {};
+custom_interface_option.templateName = 'loginradiuscustom_tmpl';
+LRObject.util.ready(function() {
+    LRObject.customInterface(".interfacecontainerdiv", custom_interface_option);
 });
 
-
-$.getJSON("/assets/credentials/config.json", function (json) {
-    apiSecret += json.apiSecret;
-    sott += json.sott;
-
+var sl_options = {};
+sl_options.onSuccess = function(response) {
+    window.location = "loggedin.html";
+    console.log(response);
+};
+sl_options.onError = function(errors) {
+    console.log(errors);
+};
+sl_options.container = "sociallogin-container";
+LRObject.util.ready(function() {
+    LRObject.init('socialLogin', sl_options);
 });
-
-function loginradius_interface(){
-    $ui = LoginRadius_SocialLogin.lr_login_settings;
-    $ui.interfacesize = "small";
-    $ui.apikey = apiSecret;
-    $ui.callback = "http://127.0.0.1:8080/loggedin.html";
-    $ui.protocol = "http://"; /*or "https://"*/
-    $ui.lrinterfacecontainer ="interfacecontainerdiv";
-    $ui.callbacktype = "QueryString";
-    LoginRadius_SocialLogin.init(options);
-}
-var options={};
-options.login=true;
-LoginRadius_SocialLogin.util.ready(loginradius_interface);

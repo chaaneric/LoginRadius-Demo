@@ -17,7 +17,6 @@
     <script>ssoLogin("loggedin.html")</script>
     <script src="assets/js/login.js" type="text/javascript"></script>
     <script src="assets/js/socialLogin.js"></script>
-    <script src="//hub.loginradius.com/include/js/LoginRadius.js"></script>
     <script src= "assets/js/customInterface.js" type="text/javascript"></script>
 
 </head>
@@ -35,6 +34,12 @@
     <tr><td>
         <div id="interfacecontainerdiv" class="interfacecontainerdiv"></div>
         <div id="sociallogin-container"></div>
+
+        <script type="text/html" id="loginradiuscustom_tmpl">
+            <a class="lr-provider-label" href="javascript:void(0)" onclick="return <#=ObjectName#>.util.openWindow('<#= Endpoint #>&callback=<#= window.location #>');" title="<#= Name #>" alt="Sign in with <#=Name#>">
+                <#=Name#>
+            </a>
+        </script>
     </td></tr>
     <tr><td>
         <div id="register">
