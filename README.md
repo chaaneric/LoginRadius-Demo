@@ -6,7 +6,7 @@ IDE Used: WebStorm 2017.1.2
 
 ## Configure the Project:
 
-This project requires the http-server npm package.  
+This project requires the ```http-server``` npm package.  
 
 Install it by running this command in terminal, or command prompt:
 ```
@@ -34,12 +34,13 @@ rather than embedded in the code.
 
 ## How to Start:
 ```
-- Run on terminal the command: http-server
+- Run on terminal the command: http-server at the working directory
 - The terminal will print out the available server URLs
 - They're typically:
 - http://127.0.0.1:8080 
 - http://192.168.1.x:8080
 - The "x" depends on the available addresses on your LAN network
+- Use the link provided on a web browser
 
 ```
 ## Implemented:
@@ -68,7 +69,7 @@ Solid Arrow = Directly Accessible
 
 Dotted Arrow = Associated
 
-[![HTML Diagram.png](https://s7.postimg.org/e1dqadduz/HTML_Diagram.png)](https://postimg.org/image/eqwimqeef/)
+[![HTML Diagram.png](https://s7.postimg.org/e1dqadduz/HTML_Diagram.png)](Diagram)
 ## Functions:
 - Most of the functions implemented were utilizing
 the API.
