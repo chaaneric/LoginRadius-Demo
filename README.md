@@ -107,6 +107,24 @@ the API.
     * ChangePhoneNumber.html
     * EmailSettings.html
     * RemoveEmail.html
+--> js
+    * SSO.js
+    * addEmail.js
+    * changeName.js
+    * changePassword.js
+    * changePhoneNumber.js
+    * customInterface.js
+    * emailResend.js
+    * emailVerification.js
+    * forgotPassword.js
+    * login.js
+    * options.js
+    * register.js
+    * removeEmail.js
+    * resetPassword.js
+    * secureLogin.js
+    * socialLogin.js
+    * ssoLogout.js
 * emailresend.html
 * emailverification.html
 * index.html
